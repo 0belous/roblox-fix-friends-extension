@@ -1,4 +1,5 @@
 # The Hell is Connections, Roblox?
+NOTE: V1.1 IS OUTDATED. V1.2 IS COMING SOON!
 
 This Chrome extension changes "Connections" back to "Friends" on the Roblox website.
 
