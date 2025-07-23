@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "The Hell is Connections Roblox",
+  "version": "1.1",
+  "description": "Changes all instances of 'Connections' back to 'Friends' on Roblox.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.roblox.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.roblox.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fixfriends@thehellisconnections.com"
+    }
+  }
+}
