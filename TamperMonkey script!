@@ -1,0 +1,35 @@
+// ==UserScript==
+// @name         The Hell is Connections, Roblox?
+// @namespace    http://tampermonkey.net/
+// @version      1.1
+// @description  Replaces "Connections" with "Friends" on Roblox because this ain't LinkedIn.
+// @author       Bonk
+// @match        https://www.roblox.com/*
+// @icon         https://www.roblox.com/favicon.ico
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    function replaceText(node) {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.includes("Connections")) {
+            node.textContent = node.textContent.replace(/Connections/g, "Friends");
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+            for (let child of node.childNodes) {
+                replaceText(child);
+            }
+        }
+    }
+
+    function scanAndReplace() {
+        replaceText(document.body);
+    }
+
+    // Initial run
+    scanAndReplace();
+
+    // Watch for changes
+    const observer = new MutationObserver((mutations) => {
+        for (let mutation of mutations) {
+            for (let node of mutation.addedNo
