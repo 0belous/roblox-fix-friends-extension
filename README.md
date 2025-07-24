@@ -2,7 +2,6 @@
 NOTE: V1.2 RELEASED!
 This Chrome extension changes "Connections" back to "Friends" on the Roblox website.
 
-> Roblox renamed "Friends" to "Connections" — this extension undoes that.
 
 ---
 
@@ -13,25 +12,28 @@ This Chrome extension changes "Connections" back to "Friends" on the Roblox webs
   - Friends sidebar
   - Friends search area
 
+## 📦 Step-by-Step Installation Guide
 
+### 🧩 Step 1: Install Tampermonkey
 
-## 🔧 How to Install in Chrome (Manual, Free)
+Tampermonkey is a browser extension that lets you run custom scripts.
 
-> No $5 Chrome Web Store fee required – this is a manual install.
+#### 👉 Pick your browser:
 
-1. **Download this repo** as a ZIP:  
-   Click the green `Code` button → `Download ZIP`.
+- **[Chrome – Click here to install](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**
+- **[Firefox – Click here to install](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)**
+- **[Edge – Click here to install](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/dhjddffhdkjifepbbgmdhlflgkhbkfbo)**
 
-2. **Extract** the ZIP on your computer.
-3. Remove the read me, and Tampermonkey, UNLESS you are using it, but you still need to move it for this to work.
+> Once installed, you’ll see a 🐵 Tampermonkey icon in the top-right of your browser.
 
-4. Go to:  
-   `chrome://extensions/`
+---
 
-5. Turn on **Developer mode** (top-right corner).
+### ✍️ Step 2: Add the Script
 
-6. Click **Load unpacked**.
-
-7. Select the extracted folder that contains the `manifest.json`.
-
-That’s it! The extension is now active.
+1. Click the **Tampermonkey 🐵 icon** in your browser
+2. Click **Dashboard**
+3. In the Dashboard, click **➕ Create a new script**
+4. **Delete** everything in the editor that appears
+5. **Paste** the TamperMonkey script In the GitHub
+6. press Ctrl + s or the save button.
+7. Activate the script and done!
