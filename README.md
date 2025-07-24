@@ -13,7 +13,7 @@ This Chrome extension changes "Connections" back to "Friends" on the Roblox webs
   - Friends sidebar
   - Friends search area
 
----
+
 
 ## 🔧 How to Install in Chrome (Manual, Free)
 
@@ -23,7 +23,7 @@ This Chrome extension changes "Connections" back to "Friends" on the Roblox webs
    Click the green `Code` button → `Download ZIP`.
 
 2. **Extract** the ZIP on your computer.
-3. Remove the read me, TamperMonkey, And Icon
+3. Remove the read me, and Tampermonkey, UNLESS you are using it, but you still need to move it for this to work.
 
 4. Go to:  
    `chrome://extensions/`
