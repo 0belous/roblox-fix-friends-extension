@@ -32,12 +32,8 @@ Tampermonkey is a browser extension that lets you run custom scripts.
 
 1. Click the **Tampermonkey 🐵 icon** in your browser
 2. Click **Dashboard**
-3. 
 4. In the Dashboard, click **➕ Create a new script**
-5. 
 6. **Delete** everything in the editor that appears
-7. 
 8. **Paste** the TamperMonkey script In the GitHub
 9. press Ctrl + s or the save button.
-10. 
 11. Activate the script and done!
