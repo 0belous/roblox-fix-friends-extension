@@ -22,7 +22,7 @@ Tampermonkey is a browser extension that lets you run custom scripts.
 
 - **[Chrome – Click here to install](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**
 - **[Firefox – Click here to install](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)**
-- **[Edge – Click here to install](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/dhjddffhdkjifepbbgmdhlflgkhbkfbo)**
+- **[Edge – Click here to install](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)**
 
 > Once installed, you’ll see a 🐵 Tampermonkey icon in the top-right of your browser.
 
