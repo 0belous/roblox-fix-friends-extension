@@ -23,14 +23,15 @@ This Chrome extension changes "Connections" back to "Friends" on the Roblox webs
    Click the green `Code` button → `Download ZIP`.
 
 2. **Extract** the ZIP on your computer.
+3. Remove the read me, TamperMonkey, And Icon
 
-3. Go to:  
+4. Go to:  
    `chrome://extensions/`
 
-4. Turn on **Developer mode** (top-right corner).
+5. Turn on **Developer mode** (top-right corner).
 
-5. Click **Load unpacked**.
+6. Click **Load unpacked**.
 
-6. Select the extracted folder that contains the `manifest.json`.
+7. Select the extracted folder that contains the `manifest.json`.
 
 That’s it! The extension is now active.
