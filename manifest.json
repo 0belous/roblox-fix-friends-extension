@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Friends Fix",
+  "version": "1.2",
+  "description": "Replaces 'Connections' text with 'Friends' on Roblox.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.roblox.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
