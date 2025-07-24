@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Connections to Friends Fix
+// @name         Connections to Friends Fix (No Duplicate Count)
 // @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  Replaces "Connections" with "Friends" in sidebar and search results
+// @version      1.6
+// @description  Replace Connections with Friends, fix duplicate text and friend count on homepage
 // @author       Bonk
 // @match        *://*.roblox.com/*
 // @grant        none
@@ -12,19 +12,52 @@
     'use strict';
 
     function replaceText() {
-        // Sidebar "Connect" ➝ "Friends"
+        // Replace all "Connections" text nodes with "Friends"
+        document.querySelectorAll("*").forEach(el => {
+            el.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE && node.nodeValue.includes("Connections")) {
+                    node.nodeValue = node.nodeValue.replace(/Connections/g, "Friends");
+                }
+            });
+        });
+
+        // Sidebar "Connect" -> "Friends"
         const sidebarItems = document.querySelectorAll('nav, aside, div, span');
-        sidebarItems.forEach((el) => {
+        sidebarItems.forEach(el => {
             if (el.textContent.trim() === "Connect") {
                 el.textContent = "Friends";
             }
         });
 
-        // Button: "Add Connection" ➝ "Add Friend"
+        // Buttons text fixes
         const buttons = document.querySelectorAll('button, a');
-        buttons.forEach((btn) => {
+        buttons.forEach(btn => {
             if (btn.textContent.trim() === "Add Connection") {
                 btn.textContent = "Add Friend";
+            } else if (btn.textContent.trim() === "Remove Connection") {
+                btn.textContent = "Remove Friend";
+            }
+        });
+
+        // --- NEW: Fix homepage friends count duplicate ---
+        // Find the element that contains the "Friends" label with a count next to it
+        // This is based on typical Roblox homepage structure; adjust selector if needed
+
+        const friendsLabels = Array.from(document.querySelectorAll('a, div, span')).filter(el => {
+            const txt = el.textContent.trim();
+            return txt === "Friends" || txt.startsWith("Friends ");
+        });
+
+        friendsLabels.forEach(el => {
+            // If the element’s next sibling also says "Friends" or similar, hide the duplicate
+            const next = el.nextElementSibling;
+            if (next && next.textContent.trim() === "Friends") {
+                next.style.display = "none";
+            }
+
+            // Also, if this element has a number badge child, do not remove it — just keep label as "Friends"
+            if (el.textContent.includes("Connections")) {
+                el.textContent = el.textContent.replace(/Connections/g, "Friends");
             }
         });
     }
@@ -32,8 +65,9 @@
     // Run initially
     replaceText();
 
-    // Run repeatedly in case of dynamic content
+    // Observe changes to update dynamically loaded content
     const observer = new MutationObserver(replaceText);
     observer.observe(document.body, { childList: true, subtree: true });
 })();
+
 
