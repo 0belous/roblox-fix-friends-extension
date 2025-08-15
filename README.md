@@ -31,10 +31,6 @@ Tampermonkey is a browser extension that lets you run custom scripts.
 
 ### ✍️ Step 2: Add the Script
 
-1. Click the **Tampermonkey 🐵 icon** in your browser
-2. Click **Dashboard**
-4. In the Dashboard, click **➕ Create a new script**
-6. **Delete** everything in the editor that appears
-8. **Paste** the TamperMonkey script In the GitHub
-9. press Ctrl + s or the save button.
-11. Activate the script and done!
+1. Click [here](https://github.com/0belous/roblox-fix-friends-extension/raw/refs/heads/main/main.user.js)
+2. Click install
+3. Enjoy!
