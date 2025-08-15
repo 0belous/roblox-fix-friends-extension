@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Fix Friends on Roblox
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Replaces "Connections" with "Friends" on Roblox pages dynamically.
-// @author       Converted from Chrome Extension
-// @match        *://*.roblox.com/*
+// @author       eagleman124
+// @match        https://*.roblox.com/*
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
